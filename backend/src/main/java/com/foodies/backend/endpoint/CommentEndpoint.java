@@ -15,7 +15,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/comments")
-@CrossOrigin(origins = {"http://localhost:5173"})
+@CrossOrigin(origins = {"http://localhost:5173",
+        "http://13.51.176.163:5173",
+        "http://127.0.0.11",
+        "http://172.26.0.2",
+        "http://frontend"})
 @RequiredArgsConstructor
 public class CommentEndpoint {
 

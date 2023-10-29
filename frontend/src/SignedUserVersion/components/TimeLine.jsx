@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import TimelineCard from "./TimelineCard.jsx";
 import {Button} from "flowbite-react";
+import api from "../../config/api";
 
 const fetchTimeline = async (token, choice) => {
   const authString = `Bearer ${token}`;
-  const response = await fetch(`http://localhost:8080/timeline/${choice}`, {
+  const response = await fetch(`${api.BACKEND.getUrl}/timeline/${choice}`, {
     method: "GET",
     headers: {
       Authorization: authString,

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
 import jwt_decode from "jwt-decode";
 import RegisterAuth from "../../auth/RegisterAuth";
 

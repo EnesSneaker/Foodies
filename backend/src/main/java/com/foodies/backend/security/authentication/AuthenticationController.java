@@ -2,13 +2,15 @@ package com.foodies.backend.security.authentication;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/auth")
+@CrossOrigin(origins = {"http://localhost:5173",
+        "http://13.51.176.163:5173",
+        "http://127.0.0.11",
+        "http://172.26.0.2",
+        "http://frontend"})
 @RequiredArgsConstructor
 public class AuthenticationController {
 
