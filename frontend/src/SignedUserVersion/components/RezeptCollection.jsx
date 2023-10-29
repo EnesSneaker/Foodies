@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Card, Button } from "flowbite-react";
+import api from "../../config/api.jsx";
 
 const fetchRezeptCollection = async (token) => {
   const authString = `Bearer ${token}`;
   console.log(authString);
-  const recipeList = await fetch("http://localhost:8080/recipe/user", {
+  const recipeList = await fetch(`${api.BACKEND.getUrl}/recipe/user`, {
     headers: {
       Authorization: authString,
     },

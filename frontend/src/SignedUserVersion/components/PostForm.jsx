@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import api from "../../config/api.jsx";
 
 const postUserFood = async (postBody, token) => {
   const authString = `Bearer ${token}`;
-  const response = await fetch(`http://localhost:8080/recipe/post`, {
+  const response = await fetch(`${api.BACKEND.getUrl}/recipe/post`, {
     method: "POST",
     headers: {
         Authorization: authString,
@@ -16,7 +17,7 @@ const postUserFood = async (postBody, token) => {
 };
 
 const getUnitsForDd = async () => {
-  const response = await fetch(`http://localhost:8080/recipe/units`, {
+  const response = await fetch(`${api.BACKEND.getUrl}/recipe/units`, {
     method: "GET",
     headers: {},
   });
